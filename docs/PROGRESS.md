@@ -16,4 +16,15 @@ Validation: `2 passed` with the project development environment.
 
 ## Next
 
-Implement JWT issuance and validation with role-based access control, beginning with an in-memory user store so the authentication contract can be tested before PostgreSQL integration.
+### Milestone 1: JWT authentication and RBAC
+
+- Added an in-memory user store with PBKDF2 password hashing.
+- Added JWT issuance and validation with expiration and role claims.
+- Added `/auth/login`, `/api/v1/users/me`, and admin-only `/admin/status` endpoints.
+- Added authentication contract tests covering invalid credentials, token validation, and role enforcement.
+
+Validation: `6 passed` with the project development environment.
+
+## Next
+
+Replace the in-memory user store with PostgreSQL persistence while preserving the authentication service contract.

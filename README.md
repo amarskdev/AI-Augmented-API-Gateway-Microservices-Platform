@@ -6,13 +6,16 @@ This repository is being built milestone by milestone. Each milestone is kept ru
 
 ## Current Status
 
-**Milestone 0: repository and gateway foundation**
+**Milestone 1: JWT authentication and RBAC**
 
 - FastAPI gateway application
 - `GET /health` liveness endpoint
 - Versioned `GET /api/v1` root endpoint
+- `POST /auth/login` JWT issuance with an in-memory user store
+- `GET /api/v1/users/me` bearer-token validation
+- Admin-only `GET /admin/status` role-based access control
 - Isolated Python development environment
-- Automated smoke tests
+- Automated smoke and authentication contract tests
 
 The larger architecture and delivery roadmap are captured in [project.md](project.md).
 
